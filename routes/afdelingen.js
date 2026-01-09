@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
-// Hier komt later je database connectie
+const db = require('../db');
 
-// GET alle afdelingen
-router.get('/', (req, res) => {
-    // Hier komt je SQL: SELECT * FROM afdelingen
-    res.json({ message: "Lijst van alle Vroentjes afdelingen" });
+// Let op: alleen een '/' hier!
+router.get('/', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM afdelingen');
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 module.exports = router;
