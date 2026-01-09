@@ -83,6 +83,9 @@ Gebruik TablePlus of MySQL CLI om te verifiëren dat je met dezelfde credentials
 Bronnen
 -------
 
+- Express Best Practices Guide: https://expressjs.com/en/advanced/best-practice-performance.html
 - Express docs: https://expressjs.com/
 - mysql2 package: https://github.com/sidorares/node-mysql2
+- REST API Design Guidelines: https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 
+- Heb copilot Alleen gebruikt op het einde om te zien of ik alle features geimplementeerd had
