@@ -73,3 +73,83 @@ Opmerkingen
 Volgende stappen / aanbevolen extra's
 - Voeg unit tests of een Postman-collection toe.
 - Verbeter validatie, voeg authenticatie (JWT) toe voor beschermde routes.
+
+Praktische aanvullingen (toegevoegd)
+----------------------------------
+
+1) .env voorbeeld
+
+Maak een bestand `.env` in de projectroot (niet committen). Bijvoorbeeld:
+
+```
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=your_password_here
+DB_NAME=chiro_vroentjes
+PORT=3000
+```
+
+Als je liever de schema in `sql/schema.sql` gebruikt, pas `DB_NAME` aan naar `nodebackend` of importeer het SQL-bestand in je database.
+
+2) Starten (Windows / PowerShell)
+
+Installeren dependencies:
+
+```powershell
+npm install
+```
+
+Start server (ontwikkeling met nodemon):
+
+```powershell
+npm run dev
+```
+
+Of productie:
+
+```powershell
+npm start
+```
+
+3) Gezonde start-checks en troubleshooting
+
+- Als `node index.js` direct crasht met een DB-fout: controleer dat MySQL draait en dat de waarden in je `.env` correct zijn (host, user, password, database).
+- Veelgemaakte oorzaak: `DB_PASSWORD` leeg of onjuist, of database bestaat niet. Gebruik TablePlus of MySQL CLI om te verifiëren dat je kunt inloggen met dezelfde credentials.
+- Als je een andere database-naam gebruikt (bijv. `nodebackend`), zorg dat `DB_NAME` overeenkomt of importeer `sql/schema.sql`.
+
+4) Testen van API (snelle checks)
+
+- Open in browser of Postman:
+	- http://localhost:3000/ -> overzichtspagina
+	- http://localhost:3000/test -> eenvoudige JSON responsetest
+
+- Voorbeeld curl (GET lijst afdelingen):
+
+```powershell
+curl http://localhost:3000/afdelingen
+```
+
+- POST voorbeeld (maak afdeling):
+
+```powershell
+curl -H "Content-Type: application/json" -d '{"naam":"SpeelclubNieuw","leerjaren":1}' http://localhost:3000/afdelingen
+```
+
+5) Postman
+
+- Er is een `postman_collection.json` in de repo met voorbeeldrequests die je kunt importeren in Postman.
+
+6) Verbeteringen en aanbevelingen
+
+- Voeg een `.env.example` toe (zonder geheimen) en vermeld deze in `.gitignore` instructies.
+- Voeg eenvoudige uptime/health endpoint of verbeterde foutmelding als DB niet bereikbaar is.
+- Voeg een test-suite toe (mocha/jest + supertest) om endpoints automatisch te valideren voor de beoordeling.
+
+Contact / hulp
+----------------
+Als je wilt kan ik:
+
+- a) een `.env.example` toevoegen en `index.js` laten controleren op vereiste env-variabelen (met duidelijke foutmelding), of
+- b) een kleine test-suite toevoegen (Supertest + Mocha) met 3-4 basis-tests.
+
+Laat me weten welke je wilt — dan implementeer ik het.
