@@ -5,13 +5,6 @@ Dit project is een eenvoudige Node.js + Express API die twee entiteiten beheert:
 Belangrijkste features
 - CRUD voor `afdelingen` (lijst, details, aanmaken, updaten, verwijderen)
 - CRUD voor `leiding` (lijst, details, aanmaken, updaten, verwijderen)
-# NodeBackEnd
-
-Dit project is een eenvoudige Node.js + Express API die twee entiteiten beheert: `afdelingen` en `leiding`.
-
-Belangrijkste features
-- CRUD voor `afdelingen` (lijst, details, aanmaken, updaten, verwijderen)
-- CRUD voor `leiding` (lijst, details, aanmaken, updaten, verwijderen)
 - Pagination (limit & offset) en zoek endpoints
 - Basis-validatie voor invoer
 - Root HTML pagina die alle endpoints beschrijft (in `public/index.html`)
@@ -87,24 +80,9 @@ Troubleshooting
 
 Gebruik TablePlus of MySQL CLI om te verifiëren dat je met dezelfde credentials kunt inloggen.
 
-Aanbevelingen / mogelijke verbeteringen
----------------------------------------
-
-- Voeg een `.env.example` (zonder geheimen) toe en vermeld dit in `.gitignore`.
-- Voeg een eenvoudige health endpoint (bijv. `/health`) die de DB-verbinding controleert.
-- Voeg een test-suite toe (Mocha/Jest + Supertest) met een paar basis-tests voor beoordeling.
-
 Bronnen
 -------
 
 - Express docs: https://expressjs.com/
 - mysql2 package: https://github.com/sidorares/node-mysql2
 
-Contact
--------
-Als je wilt kan ik:
-
-- a) een `.env.example` en een korte env-check in `index.js` toevoegen (met duidelijke foutmeldingen), of
-- b) een kleine test-suite toevoegen (Supertest + Mocha) met 3-4 basis-tests.
-
-Laat me weten welke optie je wilt; ik implementeer het dan direct.
