@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "NodeBackEnd API",
+    "description": "Simple Postman collection for afdelingen and leiding endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/test"
+      }
+    },
+    {
+      "name": "Afdelingen - list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/afdelingen"
+      }
+    },
+    {
+      "name": "Afdelingen - create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"naam\": \"SpeelclubNieuw\", \"leerjaren\": 1 }"
+        },
+        "url": "http://localhost:3000/afdelingen"
+      }
+    },
+    {
+      "name": "Leiding - list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/leiding"
+      }
+    },
+    {
+      "name": "Leiding - create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"voornaam\": \"Test\", \"achternaam\": \"User\", \"email\": \"test.user@example.com\", \"afdeling_id\": 1 }"
+        },
+        "url": "http://localhost:3000/leiding"
+      }
+    }
+  ]
+}

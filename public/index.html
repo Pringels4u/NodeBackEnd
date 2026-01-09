@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>API Endpoints - NodeBackEnd</title>
+</head>
+<body>
+    <h1>NodeBackEnd API - Endpoints</h1>
+    <p>Dit is een eenvoudige overzichtspagina van de beschikbare API endpoints. Gebruik Postman of een browser om deze endpoints te testen.</p>
+
+    <h2>Afdelingen</h2>
+    <ul>
+        <li>GET /afdelingen - lijst (optioneel: ?limit=&amp;offset=)</li>
+        <li>GET /afdelingen/search?naam=XYZ - zoek afdelingen op naam</li>
+        <li>GET /afdelingen/:id - details van 1 afdeling</li>
+        <li>POST /afdelingen - maak nieuwe afdeling (body: { naam, leerjaren })</li>
+        <li>PUT /afdelingen/:id - update afdeling (body: { naam, leerjaren })</li>
+        <li>DELETE /afdelingen/:id - verwijder afdeling</li>
+    </ul>
+
+    <h2>Leiding</h2>
+    <ul>
+        <li>GET /leiding - lijst (optioneel: ?limit=&amp;offset=)</li>
+        <li>GET /leiding/search?voornaam=...&amp;achternaam=...&amp;email=... - zoeken</li>
+        <li>GET /leiding/:id - details van 1 leiding</li>
+        <li>POST /leiding - maak nieuwe leiding (body: { voornaam, achternaam, email, afdeling_id })</li>
+        <li>PUT /leiding/:id - update leiding (body: { voornaam, achternaam, email, afdeling_id })</li>
+        <li>DELETE /leiding/:id - verwijder leiding</li>
+    </ul>
+
+    <h2>Voorbeeld</h2>
+    <p>Voor POST/PUT verzoeken gebruik JSON body en Content-Type: application/json.</p>
+
+    <h2>Tools</h2>
+    <p>Gebruik Postman voor API tests, TablePlus of DBngin om de database te bekijken en Herd om lokale databases te beheren (of DBngin voor macOS).</p>
+
+</body>
+</html>
