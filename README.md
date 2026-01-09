@@ -87,7 +87,5 @@ Bronnen
 - Express docs: https://expressjs.com/
 - mysql2 package: https://github.com/sidorares/node-mysql2
 - REST API Design Guidelines: https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
-- Laravel Feature Testing: https://laravel.com/docs/testing
-- Laravel Eloquent Relationships & Pivot Tables: https://laravel.com/docs/eloquent-relationships
 
 - Heb copilot Alleen gebruikt op het einde om te zien of ik alle features geimplementeerd had
